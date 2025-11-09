@@ -1,0 +1,49 @@
+{
+  "name": "industrial_print_lakehouse_pipeline",
+  "tasks": [
+    {
+      "task_key": "bronze_ingestion",
+      "description": "Ingest raw JSON data into Bronze Delta tables",
+      "notebook_path": "/Repos/industrial-print/01_bronze_ingestion",
+      "timeout_seconds": 3600
+    },
+    {
+      "task_key": "silver_transformations",
+      "description": "Clean and normalize data into Silver layer",
+      "depends_on": [
+        {
+          "task_key": "bronze_ingestion"
+        }
+      ],
+      "notebook_path": "/Repos/industrial-print/02_silver_transformations",
+      "timeout_seconds": 3600
+    },
+    {
+      "task_key": "gold_dwh_modeling",
+      "description": "Build Gold data marts for BI",
+      "depends_on": [
+        {
+          "task_key": "silver_transformations"
+        }
+      ],
+      "notebook_path": "/Repos/industrial-print/03_gold_dwh_modeling",
+      "timeout_seconds": 3600
+    },
+    {
+      "task_key": "customer_insights_gold",
+      "description": "Create customer insight datasets for sharing",
+      "depends_on": [
+        {
+          "task_key": "gold_dwh_modeling"
+        }
+      ],
+      "notebook_path": "/Repos/industrial-print/04_customer_insights_gold",
+      "timeout_seconds": 3600
+    }
+  ],
+  "schedule": {
+    "quartz_cron_expression": "0 0/30 * * * ?",
+    "timezone_id": "UTC",
+    "pause_status": "UNPAUSED"
+  }
+}

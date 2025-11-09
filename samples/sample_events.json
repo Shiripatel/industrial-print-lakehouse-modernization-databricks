@@ -1,0 +1,38 @@
+[
+  {
+    "event_id": "EVT0001",
+    "order_id": "ORD001",
+    "event_type": "JOB_CREATED",
+    "event_ts": "2025-10-01T09:16:00Z",
+    "machine_id": "PRN_NA_01",
+    "site_code": "NA_SITE_01",
+    "raw_payload": "{\"status\":\"JOB_CREATED\"}"
+  },
+  {
+    "event_id": "EVT0002",
+    "order_id": "ORD001",
+    "event_type": "PRINT_COMPLETED",
+    "event_ts": "2025-10-01T11:00:00Z",
+    "machine_id": "PRN_NA_01",
+    "site_code": "NA_SITE_01",
+    "raw_payload": "{\"status\":\"PRINT_COMPLETED\"}"
+  },
+  {
+    "event_id": "EVT0003",
+    "order_id": "ORD001",
+    "event_type": "SHIPPED",
+    "event_ts": "2025-10-01T15:30:00Z",
+    "machine_id": "SHIP_NA_01",
+    "site_code": "NA_SITE_01",
+    "raw_payload": "{\"status\":\"SHIPPED\"}"
+  },
+  {
+    "event_id": "EVT0004",
+    "order_id": "ORD002",
+    "event_type": "JOB_CREATED",
+    "event_ts": "2025-10-02T11:35:00Z",
+    "machine_id": "PRN_EU_01",
+    "site_code": "EU_SITE_01",
+    "raw_payload": "{\"status\":\"JOB_CREATED\"}"
+  }
+]

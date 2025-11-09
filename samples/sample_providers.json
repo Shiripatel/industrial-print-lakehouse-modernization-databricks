@@ -1,0 +1,26 @@
+[
+  {
+    "psp_id": "PSP_NA_01",
+    "psp_name": "North America Print Hub 1",
+    "region": "NA",
+    "timezone": "America/New_York",
+    "onboarded_date": "2024-03-15",
+    "is_active": true
+  },
+  {
+    "psp_id": "PSP_EU_01",
+    "psp_name": "Europe Print Hub 1",
+    "region": "EU",
+    "timezone": "Europe/Berlin",
+    "onboarded_date": "2024-05-10",
+    "is_active": true
+  },
+  {
+    "psp_id": "PSP_NA_02",
+    "psp_name": "North America Print Hub 2",
+    "region": "NA",
+    "timezone": "America/Chicago",
+    "onboarded_date": "2025-01-20",
+    "is_active": false
+  }
+]
