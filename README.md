@@ -12,6 +12,19 @@ It is designed as a **portfolio project** to demonstrate skills in:
 > All data in this repository is dummy/simulated and safe to publish.
 
 ---
+### 🏗️ Architecture Overview
+
+![Databricks Lakehouse Architecture](https://github.com/Shiripatel/industrial-print-lakehouse-modernization-databricks/blob/main/architecture/lakehouse-architecture.png?raw=true)
+
+This diagram illustrates how data flows through the **Databricks Lakehouse** environment:
+- **Bronze Layer:** Raw data ingestion from MongoDB (operational system)
+- **Silver Layer:** Cleansed and normalized data
+- **Gold Layer:** Curated datasets for BI, reporting, and AI/ML
+- **Delta Sharing:** Secure data exchange between internal teams and external customers
+- **Unity Catalog:** Centralized data governance, lineage, and access control  
+
+---
+
 
 ## 🏗 High-Level Architecture
 
@@ -104,3 +117,8 @@ You can reference this project on your resume / LinkedIn as:
 > "Designed and implemented a Databricks Lakehouse architecture for a global industrial print client (anonymized), including medallion data modeling, Delta Lake pipelines, Unity Catalog governance and Delta Sharing to external partners."
 
 Feel free to fork and extend with your own dashboards, ML notebooks or infra-as-code.
+
+
+---
+
+
